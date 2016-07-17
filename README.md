@@ -1,7 +1,5 @@
 # openssl
 
-
-
 براي صدور يك گواهينامه ssl  و كليد آن بايد در ابتدا يك درخواست امضا گواهينامه CSR توليد شود .  سپس CSR بايد به يك مركز صدور گواهينامه CA فرستاده شود تا گواهينامه SSL از سوي آن مركز صادر گردد . همچنين با استفاده از CA خود ميتوان يك گواهينامهSELF SIGED توليد كرد.
 چگونگي ساخت يك CSR با استفاده از دستور هاي ابزار OPENSSL  به صورت زير است
 #openssl req -new -newkey rsa:1024 -keyout hostkey.key-nodes -out hostcsr.csr
@@ -58,7 +56,6 @@ out hostcert.cert : گواهينامه self signed را در فايل hostcert.c
 
 چنانچه بدانيم كه مستقيما به يك گواهينامه self singed نياز است و نيازي به امضاي آن توسط يك ca  نيست ميتوانيم گواهينامه self singed  را بدون توليد csr به صورت زير توليد كنيم
 #openssl req –x509 -days 365 -newkey rsa:1024 -keyout hostkey.key-nodes -out hostcert.cert
-
 
 
 مشاهده محتواي csr
